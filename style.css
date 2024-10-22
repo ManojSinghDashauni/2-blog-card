@@ -1,0 +1,102 @@
+:root{
+    --color-yellow:hsl(47, 88%, 63%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-Gray-500: hsl(0, 0%, 42%);
+    --color-Gray-950: hsl(0, 0%, 7%);
+    --font-size-text1:24px;
+    --font-size-text2:16px;
+    --font-size-text3:14px;
+
+    --line-height:150%;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 150%;
+    /* text-align: left; */
+    color: var(--color-Gray-950)
+}
+
+body{
+    background: var(--color-yellow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    font-size: var(--font-size-text1);
+    /* color: var(--color-yellow); */
+    font-weight: 800;
+    margin-inline: 24px;
+}
+
+h3{
+    font-size: var(--font-size-text2);
+    font-weight: 300;
+    color: var(--color-Gray-500);
+    margin: 12px 24px;
+}
+
+p{
+    font-size: var(--font-size-text3);
+    margin: 12px 24px;
+}
+
+.card{
+    background: var(--color-white);
+    border: 2px solid var(--color-Gray-950);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 8px 8px var(--color-Gray-950);
+}
+.card__btn{
+    font-size: var(--font-size-text2);
+    font-weight: 800;
+    background: var(--color-yellow);
+    border: none;
+    border-radius: 4px;
+    margin-inline: 24px;
+}
+.svg__box{
+    width: 300px;
+    margin: 24px;
+    /* background-color: aqua; */
+}
+.svg__img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.avatar__box{
+    display: flex;
+    align-items: center;
+    margin:12px 24px 24px 24px;
+}
+.avatar__img{
+    width: 40px;
+    height: 40px;
+}
+h4{
+    font-size: var(--font-size-text2);
+    font-weight: 800;
+    margin: 8px;
+}
+
+a:active,a:hover{
+    h1{
+        color: var(--color-yellow);
+    }
+}
