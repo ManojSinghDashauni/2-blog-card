@@ -10,10 +10,6 @@
     --line-height:150%;
 }
 
-a{
-    text-decoration: none;
-}
-
 *{
     margin: 0;
     box-sizing: border-box;
@@ -21,21 +17,39 @@ a{
     font-optical-sizing: auto;
     font-style: normal;
     line-height: 150%;
-    /* text-align: left; */
     color: var(--color-Gray-950)
 }
 
 body{
     background: var(--color-yellow);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12,72px);
+    gap: 32px;
+}
+
+#card{
+    grid-column: 5 / span 4;
+    height: 522px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
 }
 
 h1{
     font-size: var(--font-size-text1);
-    /* color: var(--color-yellow); */
     font-weight: 800;
     margin-inline: 24px;
 }
@@ -55,10 +69,6 @@ p{
 .card{
     background: var(--color-white);
     border: 2px solid var(--color-Gray-950);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 350px;
     border-radius: 20px;
     box-shadow: 8px 8px var(--color-Gray-950);
 }
@@ -70,24 +80,31 @@ p{
     border-radius: 4px;
     margin-inline: 24px;
 }
+
 .svg__box{
-    width: 300px;
+    width: max-content;
     margin: 24px;
-    /* background-color: aqua; */
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 20px;
 }
+
 .svg__img{
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 }
+
 .avatar__box{
     display: flex;
     align-items: center;
     margin:12px 24px 24px 24px;
 }
 .avatar__img{
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
 }
 h4{
     font-size: var(--font-size-text2);
@@ -100,3 +117,16 @@ a:active,a:hover{
         color: var(--color-yellow);
     }
 }
+
+@media only screen and (max-width:431px ) {
+    body{
+        width: auto;
+    }
+    .container{
+        grid-template-columns: repeat(4,1fr);
+        margin: 24px;
+    }
+    #card{
+        grid-column: 1 / span 4;
+    }
+  }
